@@ -37,9 +37,17 @@ class Player:
         self.resume_button = tkk.CTkButton(root, text="Resume", command=self.resume_song)
         self.resume_button.grid(row=6, column=0, padx=0, pady=5)
 
+        # Slider to set song volumes
+        self.volume_bar = tkk.CTkSlider(root, from_=0, to=100, command=self.volume)
+        self.volume_bar.grid(row=11, column=0, padx=0, pady=10)
+
         self.playing_song = tkk.CTkLabel(root, text="")
         self.playing_song.place(x=20, y=600)
-    
+
+    def volume(self, value):
+        pygame.mixer.music.set_volume(value/100)
+
+
     def _load(self, song_path, random_song_name):
         if not self.song_status_id:
             pygame.mixer.music.load(song_path)
