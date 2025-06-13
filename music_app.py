@@ -1,6 +1,4 @@
-#!/home/tracsbrum/vsmanuel/venv/bin/python
 import os
-import time
 import random
 import pygame
 import tkinter as tk
@@ -38,10 +36,6 @@ class Player:
         # Button to resume songs
         self.resume_button = tkk.CTkButton(root, text="Resume", command=self.resume_song)
         self.resume_button.grid(row=6, column=0, padx=0, pady=5)
-
-        # Button to close the application by focing a check
-        self.close_button = tkk.CTkButton(root, text="Close", command=partial(self.close_player, False))
-        self.close_button.grid(row=11, column=0, padx=0, pady=10)
 
         self.playing_song = tkk.CTkLabel(root, text="")
         self.playing_song.place(x=20, y=600)
@@ -213,8 +207,8 @@ close_button.pack(side=tk.RIGHT, padx=0)
 
 
 # Set the default paths
-lock_file_path = "Musicply/lock/locked.txt"
-folder_path = 'Musicply/Music'
+lock_file_path = "lock/locked.txt"
+folder_path = 'Music'
 
 # Create and pack a label and entry for folder path
 folder_var = tkk.StringVar()
