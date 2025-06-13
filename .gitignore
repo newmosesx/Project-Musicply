@@ -1,0 +1,17 @@
+# Ignore the folder containing all my music files
+# IMPORTANT: Replace 'Music/' with the actual name of your music folder!
+Music/
+
+# Python specific files
+__pycache__/
+*.pyc
+venv/
+*.egg-info/
+
+# The lock file directory from your script
+lock/
+
+# You might also have user-specific editor/OS files to ignore
+.vscode/
+*.swp
+.DS_Store
