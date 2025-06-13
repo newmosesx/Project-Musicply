@@ -192,7 +192,6 @@ pygame.mixer.init()
 
 # Main Tkinter window (root)
 root = tkk.CTk()
-root.overrideredirect(True)
 root.title("MP3 Player")
 root.geometry("500x700")
 
